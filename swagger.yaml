@@ -1,0 +1,79 @@
+# Still in Development
+openapi: 3.0.1
+
+info:
+  title: Alpha API Documentation
+  description: Alpha Project
+  version: 0.1.0
+  
+servers:
+- url: http://localhost:3001/v1/api
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /posts:
+    get:
+      tags:
+        - posts
+      summary: Get all posts
+      security:
+        - bearerAuth: [] 
+      parameters:
+      - name: sort
+        in: query
+        description: Sort mechanism
+        schema:
+          type: string
+          enum: 
+            - asc
+            - desc
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    example: 1
+                  username:
+                    type: string
+                    example: hello
+  /login:
+    post:
+      tags:
+        - general
+      summary: login
+      requestBody:
+        description: Pet object that needs to be added to the store
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "alpha@domain.com"
+                password:
+                  type: string
+                  example: password
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: "token"

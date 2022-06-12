@@ -1,0 +1,58 @@
+body, html {
+	scroll-behavior: smooth;
+	text-decoration: none !important;
+	font-family: "Open Sans", sans-serif;
+	background-color: #9c835f;
+	width: 100%;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+/* Header */
+.customHeader div .d-inline-block {
+	line-height: 2;
+}
+
+.customHeader .headerTitle{
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffc107;
+	cursor: context-menu;
+}
+
+.room .topCards .card {
+	height: 30vh;
+}
+
+.room .card {
+  background-color: bisque;
+}
+
+.room .card .card-title {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.room .card button {
+	width: 100%;
+}
+
+.room .generatedRooms {
+	height: 35vh;
+	overflow-y: scroll;
+}
+
+.room .generatedRooms td {
+	text-align: center;
+}
+
+#showRoomCode {
+	font-size: 20px;
+}
+#showRoomCode span {
+	font-size: 26px;
+}

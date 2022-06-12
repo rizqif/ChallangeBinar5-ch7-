@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('./partials/gameHead.ejs') %>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/game/rockpaperscissor.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<div class="align-items-center customHeader" id="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-7 my-2">
+					<div class="d-inline-block mr-3">
+						<a href="/game">
+							<svg width="40px" height="40px" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="rgb(114,76,33)"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+							</svg>
+						</a>
+					</div>
+					<div class="d-inline-block mr-3">
+						<img src="/images/rockpaperscissor/logo.png" width="40px" height="40px" class="" alt="logo">
+					</div>
+					<div class="d-inline-block mx-auto align-middle headerTitle">
+						Rock Paper Scissors
+					</div>
+				</div>
+				<div class="col-5 m-auto text-right">
+					<a href="/game/history">
+						<button class="btn btn-warning gameHistory">SEE GAME HISTORY</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of header -->
+
+	<!-- Game Content -->
+	<div class="container-fluid bgColor">
+		<div class="container gameContent">
+			<div class="row mb-1">
+				<div class="col-4 col-sm-3 offset-sm-1 d-flex player">
+					<h3 class="m-auto"><%= username %></h3>
+				</div>
+				<div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex computer">
+					<h3 class="m-auto">COM</h3>
+				</div>
+			</div>
+
+			<div class="row contentImage">
+				<div class="col-4 col-sm-3 offset-sm-1 d-flex">
+					<div class="m-auto greyBox playerImage px-4 py-3"><img src="/images/rockpaperscissor/batu.png"
+							class="player rock"></div>
+				</div>
+				<div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex">
+					<div class="m-auto greyBox compImage px-4 py-3"><img src="/images/rockpaperscissor/batu.png" class="compRock">
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center contentImage">
+				<div class="col-4 col-sm-3 offset-sm-1 d-flex">
+					<div class="m-auto greyBox playerImage px-4 py-3"><img src="/images/rockpaperscissor/kertas.png"
+							class="player paper"></div>
+				</div>
+				<div class="col-2 col-sm-2 offset-sm-1 d-flex p-0 versus">
+					<div class="m-auto p-0">
+						<h1>VS</h1>
+						<div class="align-middle">
+							<h5></h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-sm-3 offset-sm-1 d-flex">
+					<div class="m-auto greyBox compImage px-4 py-3"><img src="/images/rockpaperscissor/kertas.png"
+							class="compPaper"></div>
+				</div>
+			</div>
+
+			<div class="row contentImage">
+				<div class="col-4 col-sm-3 offset-sm-1 d-flex">
+					<div class="m-auto greyBox playerImage px-4 py-3"><img src="/images/rockpaperscissor/gunting.png"
+							class="player scissor">
+					</div>
+				</div>
+				<div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex">
+					<div class="m-auto greyBox compImage px-4 py-3"><img src="/images/rockpaperscissor/gunting.png"
+							class="compScissor"></div>
+				</div>
+			</div>
+
+			<div class="row my-2">
+				<div class="col-2 col-sm-2 offset-4 offset-sm-5 d-flex p-0">
+					<div class="m-auto p-0 reset"><img src="/images/rockpaperscissor/refresh.png" class="refresh"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of Game Content-->
+
+	<%- include('./partials/bootstrapScripts.ejs') %>
+	<!-- JavaScript for Rock Paper Scissors Game -->
+	<script src="/js/rockpaperscissor/rockpaperscissor.js"></script>
+</body>
+
+</html>

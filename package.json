@@ -1,0 +1,66 @@
+{
+  "name": "challengech5",
+  "version": "1.0.0",
+  "description": "Binar Academy Full Stack Web Development Challenge Chapter 5 - Migrating to Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server/app --exec babel-node",
+    "lint:fix": "eslint server/ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed:all": "sequelize db:seed:all --debug",
+    "db:migrate:refresh": "sequelize db:migrate:undo:all && sequelize db:migrate",
+    "db:refresh:all": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all --debug"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ""
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvinlaurente/binar-challengech5.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Alvin Laurent Ertanto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvinlaurente/binar-challengech5/issues"
+  },
+  "homepage": "https://github.com/alvinlaurente/binar-challengech5#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "joi": "^17.3.0",
+    "js-yaml": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
+  }
+}

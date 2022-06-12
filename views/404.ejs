@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head.ejs') %>
+  <link rel="stylesheet" href="/css/404.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <%- include('./partials/navbar.ejs') %>
+  <!-- End of navbar -->
+
+  <div class="jumbotron jumbotron-fluid d-flex align-items-center custom404" id="newslettercontent">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 offset-md-6 text-left">
+          <h1>404</h1>
+          <h1>Page Not Found</h1>
+          <p>
+            OOPS, It seems the page you are looking for doesn't exist, isn't available or an other error occured.
+          </p>
+
+          <a href="/" class="btn btn-warning mb-3 w-50" role="button">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <%- include('./partials/navigation.ejs') %>
+  <!-- Navigation -->
+  <!-- Footer -->
+  <%- include('./partials/footer.ejs') %>
+  <!-- End of Footer -->
+  </div>
+
+  <%- include('./partials/bootstrapScripts.ejs') %>
+</body>
+
+</html>
